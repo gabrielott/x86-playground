@@ -394,7 +394,7 @@ _start:
 	jmp main__loop
 
 	main__op_div:
-	movl $0, %edx
+	cltd
 	idivl %ebx
 	pushl %eax
 	jmp main__loop
